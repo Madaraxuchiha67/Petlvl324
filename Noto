@@ -557,14 +557,14 @@ MainTab:Input({
     Title = "Target Level",
     Desc = "Stop leveling when pet reaches this level",
     Value = "30",
-    Placeholder = "Enter target level (1-500)...",
+    Placeholder = "Enter target level (1-100)...",
     Callback = function(input)
         local num = tonumber(input)
-        if num and num >= 1 and num <= 500 then
+        if num and num >= 1 and num <= 100 then
             lvlTargetLevel = num
             WindUI:Notify({Title="Target Set",Content=string.format("Will stop at Level %d", lvlTargetLevel),Duration=3,Icon="target"})
         else
-            WindUI:Notify({Title="Invalid",Content="Enter a number between 1-500",Duration=3,Icon="alert-circle"})
+            WindUI:Notify({Title="Invalid",Content="Enter a number between 1-100",Duration=3,Icon="alert-circle"})
         end
     end
 })
@@ -1015,14 +1015,14 @@ NightmareTab:Input({
     Title = "Target Level",
     Desc = "Mutate when pet reaches this level",
     Value = "30",
-    Placeholder = "Enter target level (1-500)...",
+    Placeholder = "Enter target level...",
     Callback = function(input)
         local num = tonumber(input)
-        if num and num >= 1 and num <= 500 then
+        if num and num >= 1 and num <= 100 then
             targetLevel = num
             WindUI:Notify({Title="Target Set",Content=string.format("Will stop at Level %d", targetLevel),Duration=3,Icon="target"})
         else
-            WindUI:Notify({Title="Invalid",Content="Enter a number between 1-500",Duration=3,Icon="alert-circle"})
+            WindUI:Notify({Title="Invalid",Content="Enter a number between 1-100",Duration=3,Icon="alert-circle"})
         end
     end
 })
@@ -1216,14 +1216,14 @@ ElephantMethodTab:Input({
     Title = "Target Level",
     Desc = "Stop leveling when pet reaches this level",
     Value = "100",
-    Placeholder = "Enter target level (1-500)...",
+    Placeholder = "Enter target level (1-100)...",
     Callback = function(input)
         local num = tonumber(input)
-        if num and num >= 1 and num <= 500 then
+        if num and num >= 1 and num <= 100 then
             em_TargetLevel = num
             WindUI:Notify({Title="Target Set",Content=string.format("Will stop at Level %d", em_TargetLevel),Duration=3,Icon="target"})
         else
-            WindUI:Notify({Title="Invalid",Content="Enter a number between 1-500",Duration=3,Icon="alert-circle"})
+            WindUI:Notify({Title="Invalid",Content="Enter a number between 1-100",Duration=3,Icon="alert-circle"})
         end
     end
 })
@@ -1797,5 +1797,4 @@ task.spawn(function()
         end
     end
 end)
-
 
